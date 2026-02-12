@@ -15,13 +15,19 @@ final class ViewController: UIViewController {
         
         // Network ping test
         Task {
+            let repo = TodoRepository()
             do {
-                let todos = try await NetworkService().fetchTodos()
-                print(todos)
+                let local = try await repo.fetchLocalTodos()
+                print("Local:", local)
+                
+                let remote = try await repo.fetchRemoteTodos()
+                print("Remote:", remote)
+                
             } catch {
                 print(error)
             }
         }
+
 
     }
 }

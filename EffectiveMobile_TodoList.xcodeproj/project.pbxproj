@@ -19,6 +19,8 @@
 		5F8672842F3E17170039BB09 /* TodoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672832F3E17170039BB09 /* TodoMapper.swift */; };
 		5F8672862F3E1D780039BB09 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672852F3E1D780039BB09 /* NetworkServiceProtocol.swift */; };
 		5F8672882F3E1D9B0039BB09 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672872F3E1D9B0039BB09 /* NetworkService.swift */; };
+		5F86728A2F3E21C20039BB09 /* TodoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672892F3E21C20039BB09 /* TodoRepositoryProtocol.swift */; };
+		5F86728C2F3E23D30039BB09 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F86728B2F3E23D30039BB09 /* TodoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5F8672832F3E17170039BB09 /* TodoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMapper.swift; sourceTree = "<group>"; };
 		5F8672852F3E1D780039BB09 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		5F8672872F3E1D9B0039BB09 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5F8672892F3E21C20039BB09 /* TodoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepositoryProtocol.swift; sourceTree = "<group>"; };
+		5F86728B2F3E23D30039BB09 /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				5F8672832F3E17170039BB09 /* TodoMapper.swift */,
+				5F8672892F3E21C20039BB09 /* TodoRepositoryProtocol.swift */,
+				5F86728B2F3E23D30039BB09 /* TodoRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -238,10 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F86728A2F3E21C20039BB09 /* TodoRepositoryProtocol.swift in Sources */,
 				5F8672882F3E1D9B0039BB09 /* NetworkService.swift in Sources */,
 				5F86727E2F3E12040039BB09 /* ViewController.swift in Sources */,
 				5F8672802F3E16310039BB09 /* Todo.swift in Sources */,
 				5F8672822F3E164C0039BB09 /* TodoDTO.swift in Sources */,
+				5F86728C2F3E23D30039BB09 /* TodoRepository.swift in Sources */,
 				5F8672682F3E08A80039BB09 /* AppDelegate.swift in Sources */,
 				5F86727A2F3E0F660039BB09 /* TodoModel.xcdatamodeld in Sources */,
 				5F8672862F3E1D780039BB09 /* NetworkServiceProtocol.swift in Sources */,
