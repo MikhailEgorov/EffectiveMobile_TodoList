@@ -17,6 +17,8 @@
 		5F8672802F3E16310039BB09 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F86727F2F3E16300039BB09 /* Todo.swift */; };
 		5F8672822F3E164C0039BB09 /* TodoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672812F3E164C0039BB09 /* TodoDTO.swift */; };
 		5F8672842F3E17170039BB09 /* TodoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672832F3E17170039BB09 /* TodoMapper.swift */; };
+		5F8672862F3E1D780039BB09 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672852F3E1D780039BB09 /* NetworkServiceProtocol.swift */; };
+		5F8672882F3E1D9B0039BB09 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672872F3E1D9B0039BB09 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5F86727F2F3E16300039BB09 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		5F8672812F3E164C0039BB09 /* TodoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDTO.swift; sourceTree = "<group>"; };
 		5F8672832F3E17170039BB09 /* TodoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMapper.swift; sourceTree = "<group>"; };
+		5F8672852F3E1D780039BB09 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		5F8672872F3E1D9B0039BB09 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 		5F8672732F3E0B000039BB09 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5F8672852F3E1D780039BB09 /* NetworkServiceProtocol.swift */,
+				5F8672872F3E1D9B0039BB09 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -232,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8672882F3E1D9B0039BB09 /* NetworkService.swift in Sources */,
 				5F86727E2F3E12040039BB09 /* ViewController.swift in Sources */,
 				5F8672802F3E16310039BB09 /* Todo.swift in Sources */,
 				5F8672822F3E164C0039BB09 /* TodoDTO.swift in Sources */,
 				5F8672682F3E08A80039BB09 /* AppDelegate.swift in Sources */,
 				5F86727A2F3E0F660039BB09 /* TodoModel.xcdatamodeld in Sources */,
+				5F8672862F3E1D780039BB09 /* NetworkServiceProtocol.swift in Sources */,
 				5F8672692F3E08A80039BB09 /* SceneDelegate.swift in Sources */,
 				5F8672842F3E17170039BB09 /* TodoMapper.swift in Sources */,
 				5F86727C2F3E0FCD0039BB09 /* CoreDataStack.swift in Sources */,
