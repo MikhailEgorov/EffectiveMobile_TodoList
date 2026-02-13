@@ -1,0 +1,24 @@
+//
+//  TodoListModuleBuilder.swift
+//  EffectiveMobile_TodoList
+//
+//  Created by Mikhail Egorov on 13.02.2026.
+//
+
+import UIKit
+
+final class TodoListModuleBuilder {
+    
+    static func build() -> UIViewController {
+        let view = TodoListViewController()
+        let interactor = TodoListInteractor()
+        let router = TodoListRouter()
+        let presenter = TodoListPresenter(view: view, interactor: interactor, router: router)
+        
+        view.output = presenter
+        interactor.output = presenter
+        router.viewController = view
+        
+        return view
+    }
+}
