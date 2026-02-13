@@ -25,12 +25,32 @@ final class TodoListPresenter: TodoListViewOutput {
     
     func didTapAddTodo() {}
     func didSelectTodo(_ todo: Todo) {}
-    func didToggleComplete(_ todo: Todo) {}
-    func didDeleteTodo(_ todo: Todo) {}
-    func didSearch(query: String) {}
+
+    func didToggleComplete(_ todo: Todo) {
+        var updated = todo
+        updated.isCompleted.toggle()
+        interactor.updateTodo(updated)
+    }
+
+    func didDeleteTodo(_ todo: Todo) {
+        interactor.deleteTodo(todo)
+    }
+
+    func didSearch(query: String) {
+        interactor.searchTodos(query: query)
+    }
 }
 
 extension TodoListPresenter: TodoListInteractorOutput {
-    func todosFetched(_ todos: [Todo]) {}
-    func todosFetchFailed(_ error: Error) {}
+    func todosFetched(_ todos: [Todo]) {
+        DispatchQueue.main.async {
+            self.view?.showTodos(todos)
+        }
+    }
+
+    func todosFetchFailed(_ error: Error) {
+        DispatchQueue.main.async {
+            self.view?.showError(error)
+        }
+    }
 }
