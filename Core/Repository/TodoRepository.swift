@@ -122,10 +122,21 @@ final class TodoRepository: TodoRepositoryProtocol {
     // MARK: - Search
     
     func search(query: String) async throws -> [Todo] {
-        try await withCheckedThrowingContinuation { continuation in
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        guard !trimmedQuery.isEmpty else {
+            return try await fetchLocalTodos()
+        }
+        
+        return try await withCheckedThrowingContinuation { continuation in
             coreDataStack.performBackgroundTask { context in
                 let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
-                request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", query)
+                
+                request.predicate = NSPredicate(
+                    format: "title CONTAINS[cd] %@ OR (details != nil AND details CONTAINS[cd] %@)",
+                    trimmedQuery,
+                    trimmedQuery
+                )
                 
                 do {
                     let entities = try context.fetch(request)

@@ -14,7 +14,7 @@ enum TodoMapper {
     
     static func map(dto: TodoDTO) -> Todo {
         return Todo(
-            id: UUID(), // генерируем свой UUID
+            id: UUID(),
             title: dto.todo,
             details: nil,
             createdAt: Date(),

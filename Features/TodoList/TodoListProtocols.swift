@@ -15,6 +15,7 @@ protocol TodoListViewOutput: AnyObject {
     func didToggleComplete(_ todo: Todo)
     func didDeleteTodo(_ todo: Todo)
     func didSearch(query: String)
+    func didCancelSearch()
 }
 
 // MARK: - Presenter → View

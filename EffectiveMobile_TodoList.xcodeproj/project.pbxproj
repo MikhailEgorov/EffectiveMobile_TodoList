@@ -13,7 +13,6 @@
 		5F86726C2F3E08A80039BB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8672652F3E08A80039BB09 /* LaunchScreen.storyboard */; };
 		5F86727A2F3E0F660039BB09 /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672782F3E0F660039BB09 /* TodoModel.xcdatamodeld */; };
 		5F86727C2F3E0FCD0039BB09 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F86727B2F3E0FCD0039BB09 /* CoreDataStack.swift */; };
-		5F86727E2F3E12040039BB09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F86727D2F3E12040039BB09 /* ViewController.swift */; };
 		5F8672802F3E16310039BB09 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F86727F2F3E16300039BB09 /* Todo.swift */; };
 		5F8672822F3E164C0039BB09 /* TodoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672812F3E164C0039BB09 /* TodoDTO.swift */; };
 		5F8672842F3E17170039BB09 /* TodoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8672832F3E17170039BB09 /* TodoMapper.swift */; };
@@ -28,6 +27,12 @@
 		814C93962F3EA54500C032FE /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93952F3EA54500C032FE /* TodoListInteractor.swift */; };
 		814C93982F3EA55200C032FE /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93972F3EA55200C032FE /* TodoListRouter.swift */; };
 		814C939A2F3F5B2200C032FE /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93992F3F5B2200C032FE /* TodoCell.swift */; };
+		814C93A12F3F72C700C032FE /* TodoDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93A02F3F72C700C032FE /* TodoDetailsProtocols.swift */; };
+		814C93A32F3F72F300C032FE /* TodoDetailsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93A22F3F72F300C032FE /* TodoDetailsModuleBuilder.swift */; };
+		814C93A52F3F730800C032FE /* TodoDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93A42F3F730800C032FE /* TodoDetailsInteractor.swift */; };
+		814C93A72F3F731A00C032FE /* TodoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C93A62F3F731A00C032FE /* TodoDetailsPresenter.swift */; };
+		816AEDC62F3F7D9300C9FFAB /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816AEDC52F3F7D9300C9FFAB /* TodoDetailsViewController.swift */; };
+		816AEDC82F3F80DA00C9FFAB /* TodoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816AEDC72F3F80DA00C9FFAB /* TodoDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +44,6 @@
 		5F8672672F3E08A80039BB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F8672792F3E0F660039BB09 /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
 		5F86727B2F3E0FCD0039BB09 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		5F86727D2F3E12040039BB09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F86727F2F3E16300039BB09 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		5F8672812F3E164C0039BB09 /* TodoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDTO.swift; sourceTree = "<group>"; };
 		5F8672832F3E17170039BB09 /* TodoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMapper.swift; sourceTree = "<group>"; };
@@ -54,6 +58,12 @@
 		814C93952F3EA54500C032FE /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
 		814C93972F3EA55200C032FE /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
 		814C93992F3F5B2200C032FE /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		814C93A02F3F72C700C032FE /* TodoDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsProtocols.swift; sourceTree = "<group>"; };
+		814C93A22F3F72F300C032FE /* TodoDetailsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsModuleBuilder.swift; sourceTree = "<group>"; };
+		814C93A42F3F730800C032FE /* TodoDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsInteractor.swift; sourceTree = "<group>"; };
+		814C93A62F3F731A00C032FE /* TodoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsPresenter.swift; sourceTree = "<group>"; };
+		816AEDC52F3F7D9300C9FFAB /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
+		816AEDC72F3F80DA00C9FFAB /* TodoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +103,6 @@
 				5F8672722F3E0AEA0039BB09 /* DI */,
 				5F8672622F3E08A80039BB09 /* AppDelegate.swift */,
 				5F8672662F3E08A80039BB09 /* SceneDelegate.swift */,
-				5F86727D2F3E12040039BB09 /* ViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 		5F8672702F3E0AA50039BB09 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				814C939B2F3F711B00C032FE /* TodoDetails */,
 				5F8672772F3E0B270039BB09 /* TodoList */,
 			);
 			path = Features;
@@ -224,6 +234,51 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		814C939B2F3F711B00C032FE /* TodoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				814C939F2F3F714D00C032FE /* Router */,
+				814C939E2F3F714500C032FE /* Interactor */,
+				814C939D2F3F713900C032FE /* Presenter */,
+				814C939C2F3F712800C032FE /* View */,
+				814C93A02F3F72C700C032FE /* TodoDetailsProtocols.swift */,
+				814C93A22F3F72F300C032FE /* TodoDetailsModuleBuilder.swift */,
+			);
+			path = TodoDetails;
+			sourceTree = "<group>";
+		};
+		814C939C2F3F712800C032FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				816AEDC52F3F7D9300C9FFAB /* TodoDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		814C939D2F3F713900C032FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				814C93A62F3F731A00C032FE /* TodoDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		814C939E2F3F714500C032FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				814C93A42F3F730800C032FE /* TodoDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		814C939F2F3F714D00C032FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				816AEDC72F3F80DA00C9FFAB /* TodoDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,14 +355,19 @@
 				5F86728A2F3E21C20039BB09 /* TodoRepositoryProtocol.swift in Sources */,
 				5F8672882F3E1D9B0039BB09 /* NetworkService.swift in Sources */,
 				814C938B2F3EA4AA00C032FE /* TodoListViewController.swift in Sources */,
-				5F86727E2F3E12040039BB09 /* ViewController.swift in Sources */,
+				814C93A52F3F730800C032FE /* TodoDetailsInteractor.swift in Sources */,
 				5F8672802F3E16310039BB09 /* Todo.swift in Sources */,
 				814C938D2F3EA4CE00C032FE /* TodoListProtocols.swift in Sources */,
+				814C93A12F3F72C700C032FE /* TodoDetailsProtocols.swift in Sources */,
+				814C93A72F3F731A00C032FE /* TodoDetailsPresenter.swift in Sources */,
 				814C93982F3EA55200C032FE /* TodoListRouter.swift in Sources */,
 				814C939A2F3F5B2200C032FE /* TodoCell.swift in Sources */,
 				5F8672822F3E164C0039BB09 /* TodoDTO.swift in Sources */,
 				5F86728C2F3E23D30039BB09 /* TodoRepository.swift in Sources */,
+				816AEDC82F3F80DA00C9FFAB /* TodoDetailsRouter.swift in Sources */,
+				816AEDC62F3F7D9300C9FFAB /* TodoDetailsViewController.swift in Sources */,
 				5F8672682F3E08A80039BB09 /* AppDelegate.swift in Sources */,
+				814C93A32F3F72F300C032FE /* TodoDetailsModuleBuilder.swift in Sources */,
 				5F86727A2F3E0F660039BB09 /* TodoModel.xcdatamodeld in Sources */,
 				814C93962F3EA54500C032FE /* TodoListInteractor.swift in Sources */,
 				5F8672862F3E1D780039BB09 /* NetworkServiceProtocol.swift in Sources */,

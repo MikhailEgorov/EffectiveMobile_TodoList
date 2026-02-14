@@ -15,7 +15,10 @@ final class TodoListModuleBuilder {
         let repository = TodoRepository()
         let interactor = TodoListInteractor(repository: repository)
         let router = TodoListRouter()
-        let presenter = TodoListPresenter(view: view, interactor: interactor, router: router)
+        let presenter = TodoListPresenter(view: view,
+                                          interactor: interactor,
+                                          router: router,
+                                          repository: repository)
         
         view.output = presenter
         interactor.output = presenter
