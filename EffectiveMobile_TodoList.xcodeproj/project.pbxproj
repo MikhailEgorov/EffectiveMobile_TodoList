@@ -35,6 +35,16 @@
 		816AEDC82F3F80DA00C9FFAB /* TodoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816AEDC72F3F80DA00C9FFAB /* TodoDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		815AB40A2F40D75100BAF3FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F8672412F3DEB0F0039BB09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8672482F3DEB0F0039BB09;
+			remoteInfo = EffectiveMobile_TodoList;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5F8672492F3DEB0F0039BB09 /* EffectiveMobile_TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobile_TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8672622F3E08A80039BB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +72,28 @@
 		814C93A22F3F72F300C032FE /* TodoDetailsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsModuleBuilder.swift; sourceTree = "<group>"; };
 		814C93A42F3F730800C032FE /* TodoDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsInteractor.swift; sourceTree = "<group>"; };
 		814C93A62F3F731A00C032FE /* TodoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsPresenter.swift; sourceTree = "<group>"; };
+		815AB4062F40D75100BAF3FB /* EffectiveMobile_TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectiveMobile_TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		816AEDC52F3F7D9300C9FFAB /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
 		816AEDC72F3F80DA00C9FFAB /* TodoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		815AB4072F40D75100BAF3FB /* EffectiveMobile_TodoListTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EffectiveMobile_TodoListTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		5F8672462F3DEB0F0039BB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815AB4032F40D75100BAF3FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,12 +106,13 @@
 		5F8672402F3DEB0F0039BB09 = {
 			isa = PBXGroup;
 			children = (
-				5F8672712F3E0AAE0039BB09 /* Resources */,
-				5F8672702F3E0AA50039BB09 /* Features */,
-				5F86726F2F3E0A9D0039BB09 /* Entities */,
-				5F86726E2F3E0A8D0039BB09 /* Core */,
 				5F86726D2F3E0A750039BB09 /* App */,
+				5F86726E2F3E0A8D0039BB09 /* Core */,
+				5F86726F2F3E0A9D0039BB09 /* Entities */,
+				5F8672702F3E0AA50039BB09 /* Features */,
+				5F8672712F3E0AAE0039BB09 /* Resources */,
 				5F86724A2F3DEB0F0039BB09 /* Products */,
+				815AB4072F40D75100BAF3FB /* EffectiveMobile_TodoListTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5F8672492F3DEB0F0039BB09 /* EffectiveMobile_TodoList.app */,
+				815AB4062F40D75100BAF3FB /* EffectiveMobile_TodoListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +128,9 @@
 		5F86726D2F3E0A750039BB09 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				5F8672722F3E0AEA0039BB09 /* DI */,
 				5F8672622F3E08A80039BB09 /* AppDelegate.swift */,
 				5F8672662F3E08A80039BB09 /* SceneDelegate.swift */,
+				5F8672722F3E0AEA0039BB09 /* DI */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -301,6 +329,29 @@
 			productReference = 5F8672492F3DEB0F0039BB09 /* EffectiveMobile_TodoList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		815AB4052F40D75100BAF3FB /* EffectiveMobile_TodoListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 815AB40E2F40D75100BAF3FB /* Build configuration list for PBXNativeTarget "EffectiveMobile_TodoListTests" */;
+			buildPhases = (
+				815AB4022F40D75100BAF3FB /* Sources */,
+				815AB4032F40D75100BAF3FB /* Frameworks */,
+				815AB4042F40D75100BAF3FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				815AB40B2F40D75100BAF3FB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				815AB4072F40D75100BAF3FB /* EffectiveMobile_TodoListTests */,
+			);
+			name = EffectiveMobile_TodoListTests;
+			packageProductDependencies = (
+			);
+			productName = EffectiveMobile_TodoListTests;
+			productReference = 815AB4062F40D75100BAF3FB /* EffectiveMobile_TodoListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -313,6 +364,10 @@
 				TargetAttributes = {
 					5F8672482F3DEB0F0039BB09 = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					815AB4052F40D75100BAF3FB = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5F8672482F3DEB0F0039BB09;
 					};
 				};
 			};
@@ -331,6 +386,7 @@
 			projectRoot = "";
 			targets = (
 				5F8672482F3DEB0F0039BB09 /* EffectiveMobile_TodoList */,
+				815AB4052F40D75100BAF3FB /* EffectiveMobile_TodoListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +398,13 @@
 			files = (
 				5F86726A2F3E08A80039BB09 /* Assets.xcassets in Resources */,
 				5F86726C2F3E08A80039BB09 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815AB4042F40D75100BAF3FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +442,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		815AB4022F40D75100BAF3FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		815AB40B2F40D75100BAF3FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F8672482F3DEB0F0039BB09 /* EffectiveMobile_TodoList */;
+			targetProxy = 815AB40A2F40D75100BAF3FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F8672652F3E08A80039BB09 /* LaunchScreen.storyboard */ = {
@@ -425,7 +503,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -461,7 +539,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -586,6 +664,58 @@
 			};
 			name = Release;
 		};
+		815AB40C2F40D75100BAF3FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M6P36UUCJC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MikhailEgorov.EffectiveMobile-TodoListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveMobile_TodoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EffectiveMobile_TodoList";
+			};
+			name = Debug;
+		};
+		815AB40D2F40D75100BAF3FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M6P36UUCJC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MikhailEgorov.EffectiveMobile-TodoListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveMobile_TodoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EffectiveMobile_TodoList";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -603,6 +733,15 @@
 			buildConfigurations = (
 				5F86725D2F3DEB110039BB09 /* Debug */,
 				5F86725E2F3DEB110039BB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		815AB40E2F40D75100BAF3FB /* Build configuration list for PBXNativeTarget "EffectiveMobile_TodoListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				815AB40C2F40D75100BAF3FB /* Debug */,
+				815AB40D2F40D75100BAF3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

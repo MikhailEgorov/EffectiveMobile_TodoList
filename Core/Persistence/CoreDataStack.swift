@@ -7,7 +7,12 @@
 
 import CoreData
 
-final class CoreDataStack {
+protocol CoreDataStackProtocol {
+    var viewContext: NSManagedObjectContext { get }
+    func performBackgroundTask(_ block: @escaping (NSManagedObjectContext) -> Void)
+}
+
+final class CoreDataStack: CoreDataStackProtocol {
     
     // MARK: - Properties
     

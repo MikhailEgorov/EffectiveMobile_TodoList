@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TodoDetailsRouter {
+final class TodoDetailsRouter: TodoDetailsRouterInput {
 
     // MARK: - Navigation
     weak var viewController: UIViewController?

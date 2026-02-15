@@ -11,10 +11,10 @@ import CoreData
 final class TodoRepository: TodoRepositoryProtocol {
     
     private let networkService: NetworkServiceProtocol
-    private let coreDataStack: CoreDataStack
+    private let coreDataStack: CoreDataStackProtocol
     
     init(networkService: NetworkServiceProtocol = NetworkService(),
-         coreDataStack: CoreDataStack = .shared) {
+         coreDataStack: CoreDataStackProtocol = CoreDataStack.shared) {
         self.networkService = networkService
         self.coreDataStack = coreDataStack
     }

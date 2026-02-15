@@ -11,7 +11,7 @@ final class TodoDetailsPresenter: TodoDetailsViewOutput {
     
     weak var view: TodoDetailsViewInput?
     var interactor: TodoDetailsInteractorInput
-    var router: TodoDetailsRouter
+    var router: TodoDetailsRouterInput
     
     weak var moduleOutput: TodoDetailsModuleOutput?
     
@@ -20,7 +20,7 @@ final class TodoDetailsPresenter: TodoDetailsViewOutput {
     
     init(view: TodoDetailsViewInput,
          interactor: TodoDetailsInteractorInput,
-         router: TodoDetailsRouter,
+         router: TodoDetailsRouterInput,
          todo: Todo?) {
         
         self.view = view

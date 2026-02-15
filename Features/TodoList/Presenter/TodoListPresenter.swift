@@ -13,14 +13,14 @@ final class TodoListPresenter: TodoListViewOutput {
     
     weak var view: TodoListViewInput?
     var interactor: TodoListInteractorInput
-    var router: TodoListRouter
+    var router: TodoListRouting
     
     private let repository: TodoRepositoryProtocol
     private var searchTask: Task<Void, Never>?
     
     init(view: TodoListViewInput,
          interactor: TodoListInteractorInput,
-         router: TodoListRouter,
+         router: TodoListRouting,
          repository: TodoRepositoryProtocol) {
         
         self.view = view
@@ -102,4 +102,3 @@ extension TodoListPresenter: TodoDetailsModuleOutput {
         interactor.fetchTodos()
     }
 }
-

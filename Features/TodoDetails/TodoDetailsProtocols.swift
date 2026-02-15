@@ -28,3 +28,7 @@ protocol TodoDetailsInteractorOutput: AnyObject {
 protocol TodoDetailsModuleOutput: AnyObject {
     func didFinishEditing()
 }
+
+protocol TodoDetailsRouterInput: AnyObject {
+    func close()
+}

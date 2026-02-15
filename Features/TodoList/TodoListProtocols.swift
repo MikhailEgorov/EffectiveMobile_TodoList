@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - View → Presenter
 protocol TodoListViewOutput: AnyObject {
@@ -37,4 +38,10 @@ protocol TodoListInteractorInput: AnyObject {
 protocol TodoListInteractorOutput: AnyObject {
     func todosFetched(_ todos: [Todo])
     func todosFetchFailed(_ error: Error)
+}
+
+// MARK: - Router
+protocol TodoListRouting {
+    func openTodoDetailsForAdd(from viewController: UIViewController, repository: TodoRepositoryProtocol, moduleOutput: TodoDetailsModuleOutput)
+    func openTodoDetailsForEdit(_ todo: Todo, from viewController: UIViewController, repository: TodoRepositoryProtocol, moduleOutput: TodoDetailsModuleOutput)
 }

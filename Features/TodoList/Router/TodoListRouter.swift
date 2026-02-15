@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TodoListRouter {
+final class TodoListRouter: TodoListRouting {
     weak var viewController: UIViewController?
     
     func openTodoDetailsForAdd(from viewController: UIViewController, repository: TodoRepositoryProtocol, moduleOutput: TodoDetailsModuleOutput) {
