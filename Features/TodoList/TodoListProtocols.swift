@@ -28,7 +28,6 @@ protocol TodoListViewInput: AnyObject {
 // MARK: - Presenter → Interactor
 protocol TodoListInteractorInput: AnyObject {
     func fetchTodos()
-    func addTodo(_ todo: Todo)
     func updateTodo(_ todo: Todo)
     func deleteTodo(_ todo: Todo)
     func searchTodos(query: String)

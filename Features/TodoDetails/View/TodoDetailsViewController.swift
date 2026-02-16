@@ -114,10 +114,7 @@ private extension TodoDetailsViewController {
     }
 
     func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
+        DateFormatter.todoDetailsFormatter.string(from: date)
     }
 
     func saveIfNeeded() {

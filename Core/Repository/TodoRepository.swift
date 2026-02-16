@@ -148,4 +148,22 @@ final class TodoRepository: TodoRepositoryProtocol {
             }
         }
     }
+    
+    func exists(todoID: UUID) async throws -> Bool {
+        try await withCheckedThrowingContinuation { continuation in
+            coreDataStack.performBackgroundTask { context in
+                let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
+                request.predicate = NSPredicate(format: "id == %@", todoID as CVarArg)
+                request.fetchLimit = 1
+                
+                do {
+                    let count = try context.count(for: request)
+                    continuation.resume(returning: count > 0)
+                } catch {
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
+
 }

@@ -72,9 +72,7 @@ final class TodoCell: UITableViewCell {
     // MARK: - Private methods
     
     private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        return formatter.string(from: date)
+        DateFormatter.todoCellFormatter.string(from: date)
     }
     
     @objc private func toggleTapped() {

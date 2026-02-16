@@ -15,4 +15,5 @@ protocol TodoRepositoryProtocol {
     func update(todo: Todo) async throws
     func delete(todoID: UUID) async throws
     func search(query: String) async throws -> [Todo]
+    func exists(todoID: UUID) async throws -> Bool
 }

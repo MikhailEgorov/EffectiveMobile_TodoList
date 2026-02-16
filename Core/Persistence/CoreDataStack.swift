@@ -51,10 +51,4 @@ final class CoreDataStack: CoreDataStackProtocol {
             block(context)
         }
     }
-    
-    func save(context: NSManagedObjectContext) throws {
-        if context.hasChanges {
-            try context.save()
-        }
-    }
 }

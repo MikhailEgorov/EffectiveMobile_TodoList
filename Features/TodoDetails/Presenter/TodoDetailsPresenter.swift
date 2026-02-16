@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class TodoDetailsPresenter: TodoDetailsViewOutput {
     
     weak var view: TodoDetailsViewInput?
@@ -16,7 +17,6 @@ final class TodoDetailsPresenter: TodoDetailsViewOutput {
     weak var moduleOutput: TodoDetailsModuleOutput?
     
     private var todo: Todo?
-    private var savedTodo: Todo?
     
     init(view: TodoDetailsViewInput,
          interactor: TodoDetailsInteractorInput,
@@ -41,7 +41,6 @@ final class TodoDetailsPresenter: TodoDetailsViewOutput {
             createdAt: todo?.createdAt ?? Date(),
             isCompleted: todo?.isCompleted ?? false
         )
-        savedTodo = updatedTodo
         interactor.save(todo: updatedTodo)
     }
 }

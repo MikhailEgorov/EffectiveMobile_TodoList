@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NetworkServiceProtocol {
+    func fetchTodos() async throws -> [TodoDTO]
+}
+
 final class NetworkService: NetworkServiceProtocol {
     
     private let baseURL = "https://dummyjson.com/todos"

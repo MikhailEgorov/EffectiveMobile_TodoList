@@ -14,6 +14,6 @@ final class TodoDetailsRouter: TodoDetailsRouterInput {
 
     // MARK: - Inside modul navigation methods
     func close() {
-        viewController?.dismiss(animated: true)
+        viewController?.navigationController?.popViewController(animated: true)
     }
 }

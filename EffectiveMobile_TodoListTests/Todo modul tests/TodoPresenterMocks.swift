@@ -34,8 +34,6 @@ final class TodoInteractorMock: TodoListInteractorInput {
         fetchTodosCalled = true
     }
     
-    func addTodo(_ todo: Todo) {}
-    
     func updateTodo(_ todo: Todo) {
         updateTodoCalledWith = todo
     }

@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
+@MainActor
 final class TodoListPresenter: TodoListViewOutput {
-    
     
     weak var view: TodoListViewInput?
     var interactor: TodoListInteractorInput
@@ -43,22 +43,22 @@ final class TodoListPresenter: TodoListViewOutput {
         guard let view = view as? UIViewController else { return }
         router.openTodoDetailsForAdd(from: view, repository: repository, moduleOutput: self)
     }
-
+    
     func didSelectTodo(_ todo: Todo) {
         guard let view = view as? UIViewController else { return }
         router.openTodoDetailsForEdit(todo, from: view, repository: repository, moduleOutput: self)
     }
-
+    
     func didToggleComplete(_ todo: Todo) {
         var updated = todo
         updated.isCompleted.toggle()
         interactor.updateTodo(updated)
     }
-
+    
     func didDeleteTodo(_ todo: Todo) {
         interactor.deleteTodo(todo)
     }
-
+    
     func didSearch(query: String) {
         searchTask?.cancel()
         
@@ -67,12 +67,10 @@ final class TodoListPresenter: TodoListViewOutput {
             
             guard !Task.isCancelled else { return }
             
-            await MainActor.run {
-                if query.isEmpty {
-                    self?.interactor.fetchTodos()
-                } else {
-                    self?.interactor.searchTodos(query: query)
-                }
+            if query.isEmpty {
+                self?.interactor.fetchTodos()
+            } else {
+                self?.interactor.searchTodos(query: query)
             }
         }
     }
@@ -83,21 +81,18 @@ final class TodoListPresenter: TodoListViewOutput {
 }
 
 extension TodoListPresenter: TodoListInteractorOutput {
+    
     func todosFetched(_ todos: [Todo]) {
-        DispatchQueue.main.async {
-            self.view?.showTodos(todos)
-        }
+        view?.showTodos(todos)
     }
-
+    
     func todosFetchFailed(_ error: Error) {
-        DispatchQueue.main.async {
-            self.view?.showError(error)
-        }
+        view?.showError(error)
     }
 }
 
 extension TodoListPresenter: TodoDetailsModuleOutput {
-
+    
     func didFinishEditing() {
         interactor.fetchTodos()
     }

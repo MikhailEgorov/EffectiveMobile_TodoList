@@ -19,7 +19,4 @@ final class TodoListRouter: TodoListRouting {
         let detailsVC = TodoDetailsModuleBuilder.build(todo: todo, moduleOutput: moduleOutput, repository: repository)
         viewController.navigationController?.pushViewController(detailsVC, animated: true)
     }
-    
-    func navigateToAddTodo() {}
-    func navigateToEditTodo(_ todo: Todo) {}
 }

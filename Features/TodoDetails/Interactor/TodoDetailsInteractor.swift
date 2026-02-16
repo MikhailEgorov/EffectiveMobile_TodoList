@@ -15,16 +15,18 @@ final class TodoDetailsInteractor: TodoDetailsInteractorInput {
     }
     
     func save(todo: Todo) {
-        Task {
+        Task { [weak self] in
+            guard let self else { return }
+            
             do {
-                if try await repository.fetchLocalTodos().contains(where: { $0.id == todo.id }) {
+                if try await repository.exists(todoID: todo.id) {
                     try await repository.update(todo: todo)
                 } else {
                     try await repository.add(todo: todo)
                 }
-                output?.didSaveTodo()
+                self.output?.didSaveTodo()
             } catch {
-                output?.didFailSaving(error: error)
+                self.output?.didFailSaving(error: error)
             }
         }
     }
